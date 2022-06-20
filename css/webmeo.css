@@ -26,41 +26,69 @@
 }
 
 .header {
-    background: linear-gradient(red, white, red);
+    position: relative;
+    /* background: linear-gradient(red, white, red); */
+    z-index: 10;
+    background: white;
 }
 
 .header-ct {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: rgb(255, 255, 255);
-    height: 150px;
-    padding: 35px 0;
+    padding: 15px 2px;
 }
 
 .header-ct .logo {
+    max-width: 200px;
     left: 0;
 }
 
 .header-ct .logo .logo-hd img {
-    width: 200px;
-    /* float: left; */
+    width: 100%;
+    color: red;
+}
+
+.header-ct .searchbar {
+    width: 60%;
+    margin: 0 auto;
 }
 
 .header-ct .searchbar input {
     /* float: left; */
     border-radius: 10px;
-    padding: 0 15px;
+    padding: 0 10px;
+    /* padding: 0 205px 0 15px; */
     font-size: 25px;
     border: 0.5px solid rgb(71, 71, 71);
     outline: none;
     height: 50px;
     right: 300px;
-    width: 700px;
+    width: 100%;
 }
 
 .header-ct .btnBUY {
+    margin-top: 15px;
     font-size: 30px;
+    border: 2.5px solid #087BC0;
+    border-radius: 8px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-ct .btnBUY a i {
+    margin-right: 8px;
+    color: #f84646;
+    font-size: 35px;
+}
+
+.header-ct .btnBUY a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
 }
 
 .nav {
@@ -68,17 +96,100 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: grid;
-    background: black;
+    display: flex;
+    background: linear-gradient(90deg, #0078D4, rgb(47, 139, 98), #0078D4);
+    /* background: rgb(255, 255, 255); */
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
+    z-index: 10000;
 }
 
-.navct {}
+.navct button {
+    position: relative;
+    display: none;
+    font-size: 50px;
+    float: left;
+    background: none;
+    border: none;
+}
 
-.navct {
-    background: linear-gradient(90deg, rgb(173, 77, 36), white);
+.menusml {
+    position: absolute;
+    background: white;
+    top: 32px;
+    transform-origin: bottom;
+    text-align: left;
+    z-index: 100000;
+}
+
+.menusml ul {
+    width: 1250px;
+    border: 1px solid gray;
+    padding: 10px
+}
+
+.menusml ul li {
+    line-height: 40px;
+    font-size: 25px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.menusml ul li:hover {
+    background: #BE663D;
+}
+
+.menusml ul li a {
+    color: black;
+}
+
+@media screen and (max-width: 1250px) {
+    .header {
+        padding: 30px 10px;
+    }
+    .header-ct {
+        display: flex;
+        flex-direction: column;
+        line-height: 50px;
+        /* align-items: flex-start; */
+    }
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .searchbar {
+        /* width: 100%; */
+    }
+    .content {
+        box-sizing: content-box;
+    }
+    .navct {
+        margin: 10px 0;
+        height: 25px;
+    }
+    .nav .list {
+        display: none;
+    }
+    .navct button {
+        margin: 3px 3px;
+        height: 5px;
+        display: block;
+        font-size: large;
+    }
+    .cBox button i {
+        font-size: inherit;
+    }
+    .cBox {
+        bottom: 5px;
+    }
+    .dsmeo {
+        flex-direction: column;
+        margin: 5px auto;
+    }
+}
+
+.navct .btnbars:hover i {
+    box-shadow: 2px 0 5px #ffb727;
 }
 
 .navct ul,
@@ -132,68 +243,214 @@ li.dropdown {
 }
 
 .cBox {
-    /* position: absolute; */
+    position: absolute;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    overflow: visible;
+    bottom: 55px;
     position: fixed;
-    bottom: 35px;
     width: 100%;
 }
 
 .chatbox {
-    display: flex;
-    justify-content: flex-end;
+    position: relative;
+    max-width: 1250px;
+    margin: 0 auto;
+    z-index: 1;
 }
 
-.chatbox button {
+.mess {
+    /* position: relative; */
+}
+
+.chatbox .mess {
     border: none;
     border-radius: 50%;
+    box-shadow: 0 0 5px gray;
 }
 
-.chatbox button i {
+.chatbox .mess i {
+    border-radius: 50%;
+    /* background: #0078D4; */
+    color: #0078D4;
+    box-shadow: 0 0 7px rgb(158, 8, 96);
     font-size: 50px;
-    /* color: #FEC936; */
-    /* background: red; */
 }
 
-.star {
-    position: relative;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: .9em;
-    margin-right: .9em;
-    margin-bottom: 1.2em;
-    border-right: .3em solid transparent;
-    border-bottom: .7em solid #DDDDDD;
-    border-left: .3em solid transparent;
-    /* Controlls the size of the stars. */
-    font-size: 24px;
-}
-
-.star:before,
-.star:after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
+.hopchat {
+    top: -450px;
+    right: 0;
     position: absolute;
-    top: .6em;
-    left: -1em;
-    border-right: 1em solid transparent;
-    border-bottom: .7em solid #DDDDDD;
-    border-left: 1em solid transparent;
-    transform: rotate(-35deg);
+    max-width: 300px;
+    max-height: 450px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px rgb(98, 98, 98);
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* border: 1px solid black; */
+    z-index: 100000;
 }
 
-.star:after {
-    transform: rotate(35deg);
+.chat-top {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    border-bottom: 1px solid gray;
+    margin: 0 5px;
 }
 
-.star:hover::after,
-.star:hover::before,
-.star:hover {
-    border-bottom: .7em solid #FEC936;
+.chat-top .btn-ctn {
+    height: 97%;
+    border-radius: 2px;
+    margin: 5px 20px 5px 0;
+    padding: 0 5px;
+    background: white;
+    border: none;
+}
+
+.chat-top .btn-ctn:hover {
+    /* margin: 5px; */
+    box-shadow: 0 0 5px #d4002a;
+    background: rgb(201, 201, 201);
+}
+
+.chat-top .cbtn {
+    margin-right: 15px;
+    padding: 0 3px;
+    border-radius: 13px;
+    border: none;
+    background: rgb(219, 219, 219);
+    font-size: 23px;
+}
+
+.chat-top .cbtn:hover {
+    color: #0078D4;
+    box-shadow: 0 0 5px #0078D4;
+}
+
+.msg {
+    overflow-x: hidden;
+    font-size: 18px;
+    width: 300px;
+    height: 350px;
+    padding: 10px 25px;
+    line-height: 20px;
+    background: rgb(221, 221, 221);
+}
+
+.msg p {
+    display: flex;
+    flex-direction: row-reverse
+}
+
+div #inchat span {
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+    font-size: 8px;
+}
+
+.msg p {
+    color: black;
+}
+
+div.cinput {
+    border-top: 1px solid gray;
+    bottom: 0;
+    height: 50px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+.cinput input {
+    margin: 8px 0;
+    padding: 8px 2px;
+    border-radius: 10px;
+    outline-style: none;
+    font-size: 18px;
+    width: 70%;
+    border: none;
+}
+
+.cinput i {
+    /* background: white; */
+    color: red;
+    width: 50px;
+}
+
+.chatbox .mess:hover {
+    box-shadow: 0 0 8px rgb(26, 115, 199);
+}
+
+.btnCbox {
+    font-size: 25px;
+    background: white;
+    color: gray;
+    border: none;
+}
+
+.btnCbox:hover {
+    color: #0078D4;
+}
+
+.meomeo {
+    position: relative;
+    box-sizing: border-box;
+    max-height: 700px;
+}
+
+.dsmeo {
+    position: relative;
+    overflow: hidden;
+    /* display: flex; */
+    display: flex;
+    max-width: 10 0%;
+    max-height: 700px;
+    /* justify-content: space-between; */
+    /* flex-wrap: wrap; */
+}
+
+.dsmeo img {
+    padding: 5px 5px;
+    position: absolute;
+    left: 5%;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* transform: translateX(-1700px); */
+    width: 50%;
+    height: 700px;
+    margin: 10px auto;
+    /* z-index: 10; */
+    transition: all 0.7s;
+}
+
+.dsmeo button {
+    /* position: absolute; */
+    /* bottom: -50%; */
+    /* max-height: 700px; */
+    font-size: 50px;
+    color: black;
+    border: none;
+    background: none;
+    z-index: 1;
+}
+
+
+/* .dsmeo img:nth-child(4) {
+    z-index: 1;
+} */
+
+.dsmeo input {
+    height: 100px;
+    width: 50px;
+    background-image: url(../img/—Pngtree—back\ vector\ icon_3791389.png);
+    color: black;
 }
