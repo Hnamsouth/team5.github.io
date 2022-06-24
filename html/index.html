@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/57bd35e73b.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./js/team5.js"></script>
+    <link rel="stylesheet" href="./css/webmeo.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="section cBox">
+        <div class="chatbox">
+            <div class="btnmess" style="display: flex;flex-direction: row-reverse;">
+                <button class="mess" onclick="btnm()" id="btnm"><i class="fa-brands fa-facebook-messenger"></i></button>
+            </div>
+            <div class="hopchat" id="chatb" style="display: none;">
+                <div class="chat-top">
+                    <button class="btn-ctn" type="menu"><img src="./img/640px-Meo_logo.svg.png" width="40">
+                        <span>Meo Shop</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div>
+                        <button class="cbtn" onclick="zin()"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="msg" id="inchat">
+                    <span>Cuộc trò chuyện này sẽ tiếp tục hiển thị 0đến 24 giờ ngay cả sau khi đóng. Để gỡ sớm hơn, hãy chọn Kết thúc đoạn chat trong menu thả xuống. <br></span>
+                    <span id="time"></span>
+                </div>
+                <div class="cinput">
+                    <button class="btnCbox"><ion-icon name="attach"></ion-icon></button>
+                    <input type="text" placeholder="Chat" id="cmess">
+                    <button class="btnCbox" onclick="sendmess()"><ion-icon name="send"></ion-icon></button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <header class="section header">
+        <div class="container header-ct">
+            <div class="logo">
+                <a class="logo-hd" href="#"><img src="./img/640px-Meo_logo.svg.png"></a>
+            </div>
+            <div class="searchbar">
+                <input type="text" placeholder="Tim kiem">
+            </div>
+            <div class="btnBUY">
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i><span> Giỏ hàng</span></a>
+            </div>
+        </div>
+    </header>
+    <nav class="section nav">
+
+        <div class="container navct">
+            <button class="btnbars" onclick="btnbars()">
+                <i class="fa-solid fa-bars"></i>
+                <div class="menusml" id="menusml" style="display: none;">
+                    <ul >
+                        <li><a href="#">Shop Meo</a></li>
+                        <li><a href="#">Cac Loai Meo</a></li>
+                        <li><a href="#">Do An</a></li>
+                        <li><a href="#">Khay Ve Sinh</a></li>
+                        <li><a href="#">Chuong Meo</a></li>
+                    </ul>
+                </div>
+            </button>
+            <ul class="list">
+                <li class="dropdown"><a class="nav-ct all dropbtn" href="#">Shop Meo</a></li>
+                <li class="dropdown"><a class="nav-ct all dropbtn" href="#">Cac Loai Meo</a></li>
+                <li class="dropdown"><a class="nav-ct all dropbtn" href="#">Do An</a>
+                    <div class="dropdown-content">
+                        <a href="#">Đồ ăn khô</a>
+                        <a href="#">Đồ ăn ướt</a>
+                        <a href="#">Pate</a>
+                        <a href="#">Thức ăn tươi sống</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a class="nav-ct all dropbtn" href="#">Vat Dung Cho Meo</a></li>
+                <li class="dropdown"><a class="nav-ct link dropbtn" href="">Khay Ve Sinh</a> </li>
+                <li class="dropdown"><a class="nav-ct link dropbtn" href="">Chuong Meo</a> </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <section class=" section main ">
+        <div id="mainct" class="container main-content">
+            <div class="container meomeo">
+                <div class="dsmeo" id="teammeo">
+                    <!-- <input type="button" value=""> -->
+                    <button onclick="btnleft()"><ion-icon name="chevron-back-outline"></ion-icon></button>
+                    <img src="./img/1.jpg" alt="">
+                    <img src="./img/2.jpg" alt="">
+                    <img src="./img/3.jpg" alt="">
+                    <img src="./img/4.jpg" alt="">
+                    <button onclick="btnright()"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class=" section footer ">
+        <div class="container "></div>
+    </footer>
+</body>
+
+
+</html>
