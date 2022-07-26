@@ -1,112 +1,239 @@
-body{
+body {
     width: 100%;
     margin: 0 auto;
     /*padding-left: 50%;*/
-
 }
-div{
-    margin-top: 50px;
 
+.fade {
+    margin-top: 15px;
 }
+
 .meo1 {
     display: flex;
 }
+
+
 /*.meo1 p{*/
+
+
 /*    max-height: 25px;*/
+
+
 /*    margin: 50px 0;*/
+
+
 /*}*/
+
+
 /*.meo1 div{*/
+
+
 /*    !*border: 1px solid black;*!*/
 
+
 /*    margin: 0 25px;*/
+
 
 /*    !* 3gti: gtri1: top gtri 2: left right gtri 3: bottom*!*/
+
+
 /*    !*thứ tụ : top;left;bottom;right. /nếu 2 giá trị thì: top;bottom*!*/
+
+
 /*}*/
+
+
 /*.meo2{*/
+
+
 /*    position: relative;*/
+
+
 /*    !*width: 100%;*!*/
+
+
 /*    display: flex;*/
+
+
 /*    max-width:250px;*/
+
 
 /*    !*left: 10%;*!*/
 
+
 /*}*/
+
+
 /*.meo2 div{*/
+
+
 /*    margin: 0 25px;*/
+
+
 /*}*/
+
 
 /*.meo3{*/
+
+
 /*    position: relative;*/
+
+
 /*    !*width: 100%;*!*/
+
+
 /*    display: flex;*/
+
+
 /*    max-width:250px;*/
 
 
 /*    !*left: 10%;*!*/
 
+
 /*}*/
+
+
 /*.meo3 div{*/
+
+
 /*    margin: 0 25px;*/
+
+
 /*}*/
+
+
 /*h2{*/
+
+
 /*    color: red;*/
+
+
 /*    !*font-size: 25px;*!*/
+
+
 /*    text-decoration: none;*/
+
+
 /*}*/
+
+
 /*.meo4{*/
+
+
 /*    !*position: relative;*!*/
+
+
 /*    !*width: 100%;*!*/
+
+
 /*    display: flex;*/
+
+
 /*    max-width:250px;*/
+
 
 /*    !*left: 10%;*!*/
 
+
 /*}*/
+
+
 /*.meo4 div{*/
+
+
 /*    margin: 0 25px;*/
+
+
 /*}*/
+
+
 /*.meo4 p{*/
+
+
 /*    max-height: 25px;*/
+
+
 /*    margin: 50px 0;*/
+
+
 /*}*/
+
+
 /*a{*/
+
+
 /*    color: black;*/
+
+
 /*    !*text-decoration: none;*!*/
+
+
 /*}*/
+
+
 /*.dong1{*/
+
+
 /*    font-size: 30px;*/
+
+
 /*    margin-left: 100px;*/
 
+
 /*}*/
+
+
 /*.header{*/
+
+
 /*    display:flex;*/
+
+
 /*    border-style: groove;*/
+
+
 /*    margin-bottom: 10px;*/
+
+
 /*    margin-top: -40px;*/
 
 
 /*}*/
+
+
 /*.container{*/
+
+
 /*    margin-left: -14px;*/
+
+
 /*    font-size: 20px;*/
+
+
 /*}*/
+
+
 /*.section{*/
+
+
 /*    margin-left: 65%;*/
+
+
 /*    font-size: 20px;*/
+
+
 /*}*/
-.meo1 div{
+
+.meo1 div {
     width: 20%;
     padding: 8px;
 }
-.loc{
+
+.loc {
     position: relative;
     top: -24px;
     background: white;
     font-size: 25px;
     padding: 8px;
 }
-
-
-
-
