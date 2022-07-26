@@ -1,0 +1,63 @@
+/*h{
+    bottom: 100px;
+    position: absolute;
+    font-weight: 900;
+    font-size: 25px;
+    color:steelblue;
+}*/
+
+body{
+    width: 100%;
+    margin:auto;
+
+
+}
+
+.meo1 {
+    position: relative;
+    display: flex;
+}
+.meo1 div{
+
+    margin: auto;
+
+
+
+}
+.meo2{
+    position: relative;
+
+    display: flex;
+
+    margin: 20px auto;
+
+}
+.meo2 div{
+    margin: 0 25px;
+}
+
+.meo3{
+    position: relative;
+
+    display: flex;
+
+}
+.meo3 div{
+    margin: 0 25px;
+}
+.meo1 img{
+    width: 225px;
+    height: 225px;
+
+}
+h1{
+    color: red;
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+p{
+    font-size: 15px;
+}
