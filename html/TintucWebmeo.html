@@ -14,6 +14,67 @@
 </head>
 
 <body class="blog">
+    <div class="section cBox">
+        <div class="chatbox">
+            <div class="btnmess" style="display: flex;flex-direction: row-reverse;">
+                <button class="mess" onclick="btnm()" id="btnm">
+                    <svg style="    width: 50px;height: 50px;color: #3e6dff;"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
+                        <path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"/>
+                      </svg>
+                </button>
+            </div>
+            <div class="hopchat" id="chatb" style="display: none;">
+                <div class="chat-top">
+                    <button class="btn-ctn" type="menu"><img src="./img/logo.webp" width="40">
+                        <span>Meo Shop</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+                    </button>
+                    <button class="cbtn" onclick="zin()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-angle-contract" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M.172 15.828a.5.5 0 0 0 .707 0l4.096-4.096V14.5a.5.5 0 1 0 1 0v-3.975a.5.5 0 0 0-.5-.5H1.5a.5.5 0 0 0 0 1h2.768L.172 15.121a.5.5 0 0 0 0 .707zM15.828.172a.5.5 0 0 0-.707 0l-4.096 4.096V1.5a.5.5 0 1 0-1 0v3.975a.5.5 0 0 0 .5.5H14.5a.5.5 0 0 0 0-1h-2.768L15.828.879a.5.5 0 0 0 0-.707z"/>
+                              </svg>
+                        </button>
+                </div>
+                <div class="msg" id="inchat">
+                    <span>Cuộc trò chuyện này sẽ tiếp tục hiển thị 0đến 24 giờ ngay cả sau khi đóng. Để gỡ sớm hơn, hãy chọn Kết thúc đoạn chat trong menu thả xuống. <br></span>
+                    <span id="time"></span>
+                </div>
+                <div class="cinput">
+                    <button class="btnCbox">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
+                        <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"/>
+                      </svg>
+                    </button>
+                    <button class="btnCbox">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-image" viewBox="0 0 16 16">
+                            <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                            <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z"/>
+                          </svg>
+                    </button>
+                    <button class="btnCbox">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                          </svg>
+                    </button>
+                    <div class="input-group">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="cmess" placeholder="Username" onkeydown="inputmess(event)">
+                            <label style="font-size: 15px;" for="cmess">Send mess</label>
+                        </div>
+                    </div>
+                    <!-- <input type="text" placeholder="Chat" id="cmess"> -->
+                    <button class="btnCbox" onclick="sendmess()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                            <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                          </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="header">
 
         <div class="top-bar clearfix">
@@ -40,7 +101,7 @@
 
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="/tin-tuc" title="Tin tức">Tin tức</a>
+                            <a class="nav-link" href="./TintucWebmeo.html" title="Tin tức">Tin tức</a>
                         </li>
 
 
@@ -91,7 +152,7 @@
                         <span class="js-wishlist-count">0</span>
                     </a>
                     <div class="evo-header-account d-none d-lg-inline-block">
-                        <a href="/account" class="header-account d-none d-lg-inline-block" aria-label="Tài khoản" title="Tài khoản">
+                        <a href="../html/login.html" class="header-account d-none d-lg-inline-block" aria-label="Tài khoản" title="Tài khoản">
                             <svg viewBox="0 0 512 512"><path d="M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148    C404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962    c-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216    h40C512,443.62,485.371,379.333,437.02,330.98z M256,256c-59.551,0-108-48.448-108-108S196.449,40,256,40    c59.551,0,108,48.448,108,108S315.551,256,256,256z" data-original="#222222" class="active-path" fill="#222222"></path></svg>
                         </a>
                         <ul>
@@ -101,7 +162,7 @@
 
                         </ul>
                     </div>
-                    <a href="./html/Giohang.html" class="evo-header-cart" aria-label="Xem giỏ hàng" title="Giỏ hàng">
+                    <a href="../html/Giohang.html" class="evo-header-cart" aria-label="Xem giỏ hàng" title="Giỏ hàng">
                         <svg viewBox="0 0 19 23">
 						<path d="M0 22.985V5.995L2 6v.03l17-.014v16.968H0zm17-15H2v13h15v-13zm-5-2.882c0-2.04-.493-3.203-2.5-3.203-2 0-2.5 1.164-2.5 3.203v.912H5V4.647C5 1.19 7.274 0 9.5 0 11.517 0 14 1.354 14 4.647v1.368h-2v-.912z" fill="#222"></path>
 					</svg>
@@ -112,200 +173,54 @@
             </div>
             <div class="ant-menu d-none d-lg-block">
                 <ul id="nav" class="nav">
-
-
-
-
                     <li class="nav-item ">
                         <a class="nav-link" href="/" title="Trang chủ">Trang chủ</a>
                     </li>
-
-
-
-
                     <li class="nav-item ">
                         <a class="nav-link" href="/gioi-thieu" title="Giới thiệu">Giới thiệu</a>
                     </li>
-
-
-
-
                     <li class=" nav-item has-childs   has-mega">
-                        <a href="/collections/all" class="nav-link" title="Sản phẩm">Sản phẩm <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490.656 490.656" style="enable-background:new 0 0 490.656 490.656;" xml:space="preserve" width="25px" height="25px"><path d="M487.536,120.445c-4.16-4.16-10.923-4.16-15.083,0L245.339,347.581L18.203,120.467c-4.16-4.16-10.923-4.16-15.083,0    c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667c2.091,2.069,4.821,3.115,7.552,3.115s5.461-1.045,7.531-3.136l234.667-234.667    C491.696,131.368,491.696,124.605,487.536,120.445z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#141414"></path></svg></a>
+                        <a href="./Thucan-DANH.html" class="nav-link" title="Sản phẩm">Sản phẩm <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490.656 490.656" style="enable-background:new 0 0 490.656 490.656;" xml:space="preserve" width="25px" height="25px"><path d="M487.536,120.445c-4.16-4.16-10.923-4.16-15.083,0L245.339,347.581L18.203,120.467c-4.16-4.16-10.923-4.16-15.083,0    c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667c2.091,2.069,4.821,3.115,7.552,3.115s5.461-1.045,7.531-3.136l234.667-234.667    C491.696,131.368,491.696,124.605,487.536,120.445z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#141414"></path></svg></a>
                         <div class="mega-content">
                             <div class="container">
                                 <ul class="level0">
-
-
                                     <li class="level1 parent item fix-navs">
-                                        <a class="hmega" href="/thuc-an-dinh-duong" title="Thức ăn, dinh dưỡng">Thức ăn, dinh dưỡng</a>
-                                        <ul class="level1">
-
-                                            <li class="level2">
-                                                <a href="/thuc-an-hat-kho" title="Thức ăn hạt khô">Thức ăn hạt khô</a>
-                                            </li>
-
-                                            <li class="level2">
-                                                <a href="/pate-nuoc-sot" title="Pate &amp; Nước sốt">Pate &amp; Nước sốt</a>
-                                            </li>
-
-                                            <li class="level2">
-                                                <a href="/snack-banh-thuong" title="Snack &amp; Bánh thưởng">Snack &amp; Bánh thưởng</a>
-                                            </li>
-
-                                            <li class="level2">
-                                                <a href="/vitamin-dinh-duong" title="Vitamin &amp; Dinh dưỡng">Vitamin &amp; Dinh dưỡng</a>
-                                            </li>
-
-                                            <li class="level2">
-                                                <a href="/co-meo-catnip" title="Cỏ mèo &amp; Catnip">Cỏ mèo &amp; Catnip</a>
-                                            </li>
-
-                                            <li class="level2">
-                                                <a href="/bat-an-binh-uong-nuoc" title="Bát ăn &amp; Bình uống nước">Bát ăn &amp; Bình uống nước</a>
-                                            </li>
-
-                                        </ul>
+                                        <a class="hmega" href="./Thucan-DANH.html" title="Thức ăn, dinh dưỡng">Thức ăn, dinh dưỡng</a>
                                     </li>
-
-
-
                                     <li class="level1 parent item fix-navs">
                                         <a class="hmega" href="/ve-sinh-cham-soc" title="Vệ sinh, Chăm sóc">Vệ sinh, Chăm sóc</a>
-                                        <ul class="level1">
-
-                                            <li class="level2">
-                                                <a href="/khay-nha-ve-sinh" title="Khay &amp; Nhà vệ sinh">Khay &amp; Nhà vệ sinh</a>
-                                            </li>
-
-                                            <li class="level2">
-                                                <a href="/cat-ve-sinh-cho-meo" title="Cát vệ sinh cho mèo">Cát vệ sinh cho mèo</a>
-                                            </li>
-
-                                            <li class="level2">
-                                                <a href="/sua-tam-xit-duong" title="Sữa tắm &amp; Xịt dưỡng">Sữa tắm &amp; Xịt dưỡng</a>
-                                            </li>
-
-                                            <li class="level2">
-                                                <a href="/luoc-chai-long-cat-mong" title="Lược chải lông &amp; Cắt móng">Lược chải lông &amp; Cắt móng</a>
-                                            </li>
-
-                                        </ul>
                                     </li>
-
-
-
                                     <li class="level1 parent item fix-navs">
-                                        <a class="hmega" href="/do-dung-phu-kien" title="Đồ dùng, Phụ kiện">Đồ dùng, Phụ kiện</a>
-                                        <ul class="level1">
-
-                                            <li class="level2">
-                                                <a href="/quan-ao-trang-suc" title="Quần áo &amp; Trang sức">Quần áo &amp; Trang sức</a>
-                                            </li>
-
-                                            <li class="level2">
-                                                <a href="/vong-co-day-dat" title="Vòng cổ &amp; Dây dắt">Vòng cổ &amp; Dây dắt</a>
-                                            </li>
-
-                                            <li class="level2">
-                                                <a href="/tui-xach-long-van-chuyen" title="Túi xách &amp; Lồng vận chuyển">Túi xách &amp; Lồng vận chuyển</a>
-                                            </li>
-
-                                            <li class="level2">
-                                                <a href="/do-choi-huan-luyen" title="Đồ chơi &amp; Huấn luyện">Đồ chơi &amp; Huấn luyện</a>
-                                            </li>
-
-                                        </ul>
+                                        <a class="hmega" href="./vatdung-TheAnh.html" title="Đồ dùng, Phụ kiện">Đồ dùng, Phụ kiện</a>
                                     </li>
-
-
-
                                     <li class="level1 parent item fix-navs">
-                                        <a class="hmega" href="/nha-chuong-nem" title="Nhà, chuồng, nệm">Nhà, chuồng, nệm</a>
-                                        <ul class="level1">
-
-                                            <li class="level2">
-                                                <a href="/nha-meo-nha-cay-cattree" title="Nhà mèo &amp; Nhà cây Cattree">Nhà mèo &amp; Nhà cây Cattree</a>
-                                            </li>
-
-                                            <li class="level2">
-                                                <a href="/tru-cot-ban-cao-mong" title="Trụ cột &amp; Bàn cào móng">Trụ cột &amp; Bàn cào móng</a>
-                                            </li>
-
-                                            <li class="level2">
-                                                <a href="/chuong-meo-1-2-3-tang" title="Chuồng mèo 1, 2, 3 tầng">Chuồng mèo 1, 2, 3 tầng</a>
-                                            </li>
-
-                                            <li class="level2">
-                                                <a href="/o-nem-tham-dem" title="Ổ nệm &amp; Thảm đệm">Ổ nệm &amp; Thảm đệm</a>
-                                            </li>
-
-                                        </ul>
+                                        <a class="hmega" href="./phukien-Anhthanh.html" title="Nhà, chuồng, nệm">Nhà, chuồng, nệm</a>
                                     </li>
-
-
-
                                     <li class="level1 parent item fix-navs">
                                         <a class="hmega" href="/y-te-thuoc-cho-meo" title="Y tế &amp; thuốc cho mèo">Y tế &amp; thuốc cho mèo</a>
-                                        <ul class="level1">
-
-                                            <li class="level2">
-                                                <a href="/tay-xo-giun-san" title="Tẩy xổ giun &amp; sán">Tẩy xổ giun &amp; sán</a>
-                                            </li>
-
-                                            <li class="level2">
-                                                <a href="/tri-ve-ran-bo-chet" title="Trị ve rận &amp; bọ chét">Trị ve rận &amp; bọ chét</a>
-                                            </li>
-
-                                        </ul>
                                     </li>
-
-
-
                                     <li class="level1 item">
                                         <a class="hmega" href="/phu-kien-khuyen-mai" title="Phụ kiện khuyến mãi">Phụ kiện khuyến mãi</a>
                                     </li>
-
-
                                 </ul>
                             </div>
                         </div>
                     </li>
-
-
-
-
                     <li class="nav-item ">
                         <a class="nav-link" href="/san-pham-moi-ve" title="Sản phẩm mới về">Sản phẩm mới về</a>
                     </li>
-
-
-
-
                     <li class="nav-item ">
                         <a class="nav-link" href="/khuyen-mai-trong-ngay" title="Khuyến mãi trong ngày">Khuyến mãi trong ngày</a>
                     </li>
-
-
-
-
                     <li class="nav-item active">
-                        <a class="nav-link" href="/tin-tuc" title="Tin tức">Tin tức</a>
+                        <a class="nav-link" href="./TintucWebmeo.html" title="Tin tức">Tin tức</a>
                     </li>
-
-
-
-
                     <li class="nav-item ">
-                        <a class="nav-link" href="/lien-he" title="Liên hệ">Liên hệ</a>
+                        <a class="nav-link" href="./lienhe.html" title="Liên hệ">Liên hệ</a>
                     </li>
-
-
-
                     <li class="nav-item booking-calendar-item ">
                         <a class="nav-link" href="../html/datLich.html" title="Đặt lịch dịch vụ"><svg version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><path d="m457 60h-36v-15c0-24.813-20.187-45-45-45s-45 20.187-45 45v15h-150v-15c0-24.813-20.187-45-45-45s-45 20.187-45 45v15h-36c-30.327 0-55 24.673-55 55v342c0 30.327 24.673 55 55 55h402c30.327 0 55-24.673 55-55v-342c0-30.327-24.673-55-55-55zm-96-15c0-8.271 6.729-15 15-15s15 6.729 15 15v60c0 8.271-6.729 15-15 15s-15-6.729-15-15zm-240 0c0-8.271 6.729-15 15-15s15 6.729 15 15v60c0 8.271-6.729 15-15 15s-15-6.729-15-15zm-91 70c0-13.785 11.215-25 25-25h36v15c0 24.813 20.187 45 45 45s45-20.187 45-45v-15h150v15c0 24.813 20.187 45 45 45s45-20.187 45-45v-15h36c13.785 0 25 11.215 25 25v67h-452zm452 342c0 13.785-11.215 25-25 25h-402c-13.785 0-25-11.215-25-25v-245h452z" fill="#ffffff" data-original="#000000" style="" class=""></path><path d="m306.764 272h23.473v165c0 8.284 6.716 15 15 15s15-6.716 15-15v-180c0-8.284-6.716-15-15-15h-38.473c-8.284 0-15 6.716-15 15s6.715 15 15 15z" fill="#ffffff" data-original="#000000" style="" class=""></path><path d="m211.764 422c-14.886 0-27.658-11.09-29.71-25.796-.192-1.378-.29-2.792-.29-4.204 0-8.284-6.716-15-15-15s-15 6.716-15 15c0 2.793.194 5.603.577 8.35 4.109 29.445 29.655 51.65 59.423 51.65 33.084 0 60-26.916 60-60 0-17.908-7.896-33.997-20.377-45 12.481-11.003 20.377-27.092 20.377-45 0-33.084-26.916-60-60-60-28.607 0-53.367 20.35-58.874 48.387-1.597 8.129 3.699 16.013 11.828 17.61 8.12 1.596 16.012-3.699 17.609-11.828 2.751-14.004 15.131-24.169 29.437-24.169 16.542 0 30 13.458 30 30s-13.458 30-30 30c-8.284 0-15 6.716-15 15s6.716 15 15 15c16.542 0 30 13.458 30 30s-13.458 30-30 30z" fill="#ffffff" data-original="#000000" style="" class=""></path></svg> Đặt lịch dịch vụ</a>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -831,7 +746,7 @@
 
                         <a href="/khuyen-mai-trong-ngay" title="Khuyến mãi trong ngày" rel="nofollow">Khuyến mãi trong ngày</a>
 
-                        <a href="/tin-tuc" title="Tin tức" rel="nofollow">Tin tức</a>
+                        <a href="./TintucWebmeo.html" title="Tin tức" rel="nofollow">Tin tức</a>
 
                         <a href="/lien-he" title="Liên hệ" rel="nofollow">Liên hệ</a>
 
@@ -851,7 +766,7 @@
 
                         <a href="/khuyen-mai-trong-ngay" title="Khuyến mãi trong ngày" rel="nofollow">Khuyến mãi trong ngày</a>
 
-                        <a href="/tin-tuc" title="Tin tức" rel="nofollow">Tin tức</a>
+                        <a href="./TintucWebmeo.html" title="Tin tức" rel="nofollow">Tin tức</a>
 
                         <a href="/lien-he" title="Liên hệ" rel="nofollow">Liên hệ</a>
 
@@ -871,7 +786,7 @@
 
                         <a href="/khuyen-mai-trong-ngay" title="Khuyến mãi trong ngày" rel="nofollow">Khuyến mãi trong ngày</a>
 
-                        <a href="/tin-tuc" title="Tin tức" rel="nofollow">Tin tức</a>
+                        <a href="./TintucWebmeo.html" title="Tin tức" rel="nofollow">Tin tức</a>
 
                         <a href="/lien-he" title="Liên hệ" rel="nofollow">Liên hệ</a>
 
@@ -1064,7 +979,7 @@
 
 
                 <li class="ng-scope active">
-                    <a href="/tin-tuc" title="Tin tức">Tin tức</a>
+                    <a href="./TintucWebmeo.html" title="Tin tức">Tin tức</a>
                 </li>
 
 
@@ -1084,7 +999,7 @@
 
 
                 <li class="ng-scope active">
-                    <a href="/tin-tuc" title="Tin tức">Tin tức</a>
+                    <a href="./TintucWebmeo.html" title="Tin tức">Tin tức</a>
                 </li>
 
 
