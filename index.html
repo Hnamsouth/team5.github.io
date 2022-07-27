@@ -22,7 +22,7 @@
         <div class="chatbox">
             <div class="btnmess" style="display: flex;flex-direction: row-reverse;">
                 <button class="mess" onclick="btnm()" id="btnm">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
+                    <svg style="    width: 50px;height: 50px;color: #3e6dff;"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
                         <path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"/>
                       </svg>
                 </button>
@@ -35,13 +35,11 @@
                             <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                           </svg>
                     </button>
-                    <div>
-                        <button class="cbtn" onclick="zin()">
+                    <button class="cbtn" onclick="zin()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-angle-contract" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M.172 15.828a.5.5 0 0 0 .707 0l4.096-4.096V14.5a.5.5 0 1 0 1 0v-3.975a.5.5 0 0 0-.5-.5H1.5a.5.5 0 0 0 0 1h2.768L.172 15.121a.5.5 0 0 0 0 .707zM15.828.172a.5.5 0 0 0-.707 0l-4.096 4.096V1.5a.5.5 0 1 0-1 0v3.975a.5.5 0 0 0 .5.5H14.5a.5.5 0 0 0 0-1h-2.768L15.828.879a.5.5 0 0 0 0-.707z"/>
                               </svg>
                         </button>
-                    </div>
                 </div>
                 <div class="msg" id="inchat">
                     <span>Cuộc trò chuyện này sẽ tiếp tục hiển thị 0đến 24 giờ ngay cả sau khi đóng. Để gỡ sớm hơn, hãy chọn Kết thúc đoạn chat trong menu thả xuống. <br></span>
@@ -65,7 +63,13 @@
                             <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                           </svg>
                     </button>
-                    <input type="text" placeholder="Chat" id="cmess">
+                    <div class="input-group">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="cmess" placeholder="Username" onkeydown="inputmess(event)">
+                            <label style="font-size: 15px;" for="cmess">Send mess</label>
+                        </div>
+                    </div>
+                    <!-- <input type="text" placeholder="Chat" id="cmess"> -->
                     <button class="btnCbox" onclick="sendmess()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
                             <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
@@ -74,8 +78,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
     <header class="header">
         <div class="header-mid evo-header-padding container">
@@ -123,7 +125,7 @@
                             <li class="ng-scope "><a rel="nofollow" href="./html/register.html" title="Đăng ký">Đăng ký</a></li>
                         </ul>
                     </div>
-                    <a href="javascript:void(0)" class="evo-header-cart" aria-label="Xem giỏ hàng" title="Giỏ hàng">
+                    <a href="./html/Giohang.html" class="evo-header-cart" aria-label="Xem giỏ hàng" title="Giỏ hàng">
                         <svg viewBox="0 0 19 23">
                             <path d="M0 22.985V5.995L2 6v.03l17-.014v16.968H0zm17-15H2v13h15v-13zm-5-2.882c0-2.04-.493-3.203-2.5-3.203-2 0-2.5 1.164-2.5 3.203v.912H5V4.647C5 1.19 7.274 0 9.5 0 11.517 0 14 1.354 14 4.647v1.368h-2v-.912z" fill="#222"></path>
                         </svg>
@@ -255,14 +257,12 @@
                         <a class="nav-link" href="/html/lienhe.html" title="Liên hệ">Liên hệ</a>
                     </li>
                     <li class="nav-item booking-calendar-item ">
-                        <a class="nav-link" href="/dat-lich-dich-vu" title="Đặt lịch dịch vụ"><svg version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><path d="m457 60h-36v-15c0-24.813-20.187-45-45-45s-45 20.187-45 45v15h-150v-15c0-24.813-20.187-45-45-45s-45 20.187-45 45v15h-36c-30.327 0-55 24.673-55 55v342c0 30.327 24.673 55 55 55h402c30.327 0 55-24.673 55-55v-342c0-30.327-24.673-55-55-55zm-96-15c0-8.271 6.729-15 15-15s15 6.729 15 15v60c0 8.271-6.729 15-15 15s-15-6.729-15-15zm-240 0c0-8.271 6.729-15 15-15s15 6.729 15 15v60c0 8.271-6.729 15-15 15s-15-6.729-15-15zm-91 70c0-13.785 11.215-25 25-25h36v15c0 24.813 20.187 45 45 45s45-20.187 45-45v-15h150v15c0 24.813 20.187 45 45 45s45-20.187 45-45v-15h36c13.785 0 25 11.215 25 25v67h-452zm452 342c0 13.785-11.215 25-25 25h-402c-13.785 0-25-11.215-25-25v-245h452z" fill="#ffffff" data-original="#000000" style="" class=""></path><path d="m306.764 272h23.473v165c0 8.284 6.716 15 15 15s15-6.716 15-15v-180c0-8.284-6.716-15-15-15h-38.473c-8.284 0-15 6.716-15 15s6.715 15 15 15z" fill="#ffffff" data-original="#000000" style="" class=""></path><path d="m211.764 422c-14.886 0-27.658-11.09-29.71-25.796-.192-1.378-.29-2.792-.29-4.204 0-8.284-6.716-15-15-15s-15 6.716-15 15c0 2.793.194 5.603.577 8.35 4.109 29.445 29.655 51.65 59.423 51.65 33.084 0 60-26.916 60-60 0-17.908-7.896-33.997-20.377-45 12.481-11.003 20.377-27.092 20.377-45 0-33.084-26.916-60-60-60-28.607 0-53.367 20.35-58.874 48.387-1.597 8.129 3.699 16.013 11.828 17.61 8.12 1.596 16.012-3.699 17.609-11.828 2.751-14.004 15.131-24.169 29.437-24.169 16.542 0 30 13.458 30 30s-13.458 30-30 30c-8.284 0-15 6.716-15 15s6.716 15 15 15c16.542 0 30 13.458 30 30s-13.458 30-30 30z" fill="#ffffff" data-original="#000000" style="" class=""></path></svg> Đặt lịch dịch vụ</a>
+                        <a class="nav-link" href="../html/datLich.html" title="Đặt lịch dịch vụ"><svg version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><path d="m457 60h-36v-15c0-24.813-20.187-45-45-45s-45 20.187-45 45v15h-150v-15c0-24.813-20.187-45-45-45s-45 20.187-45 45v15h-36c-30.327 0-55 24.673-55 55v342c0 30.327 24.673 55 55 55h402c30.327 0 55-24.673 55-55v-342c0-30.327-24.673-55-55-55zm-96-15c0-8.271 6.729-15 15-15s15 6.729 15 15v60c0 8.271-6.729 15-15 15s-15-6.729-15-15zm-240 0c0-8.271 6.729-15 15-15s15 6.729 15 15v60c0 8.271-6.729 15-15 15s-15-6.729-15-15zm-91 70c0-13.785 11.215-25 25-25h36v15c0 24.813 20.187 45 45 45s45-20.187 45-45v-15h150v15c0 24.813 20.187 45 45 45s45-20.187 45-45v-15h36c13.785 0 25 11.215 25 25v67h-452zm452 342c0 13.785-11.215 25-25 25h-402c-13.785 0-25-11.215-25-25v-245h452z" fill="#ffffff" data-original="#000000" style="" class=""></path><path d="m306.764 272h23.473v165c0 8.284 6.716 15 15 15s15-6.716 15-15v-180c0-8.284-6.716-15-15-15h-38.473c-8.284 0-15 6.716-15 15s6.715 15 15 15z" fill="#ffffff" data-original="#000000" style="" class=""></path><path d="m211.764 422c-14.886 0-27.658-11.09-29.71-25.796-.192-1.378-.29-2.792-.29-4.204 0-8.284-6.716-15-15-15s-15 6.716-15 15c0 2.793.194 5.603.577 8.35 4.109 29.445 29.655 51.65 59.423 51.65 33.084 0 60-26.916 60-60 0-17.908-7.896-33.997-20.377-45 12.481-11.003 20.377-27.092 20.377-45 0-33.084-26.916-60-60-60-28.607 0-53.367 20.35-58.874 48.387-1.597 8.129 3.699 16.013 11.828 17.61 8.12 1.596 16.012-3.699 17.609-11.828 2.751-14.004 15.131-24.169 29.437-24.169 16.542 0 30 13.458 30 30s-13.458 30-30 30c-8.284 0-15 6.716-15 15s6.716 15 15 15c16.542 0 30 13.458 30 30s-13.458 30-30 30z" fill="#ffffff" data-original="#000000" style="" class=""></path></svg> Đặt lịch dịch vụ</a>
                     </li>
                 </ul>
             </div>
         </div>
     </header>
-
-
     <section class="section main">
         <div class="container content">
             <!-- Carousel -->
@@ -536,18 +536,12 @@
                     </a>
                     <p class="footer-slogan">
                         Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với chúng tôi
-
                         <a href="mailto:support@sapo.vn" title="support@sapo.vn">support@sapo.vn</a>
-
                     </p>
                     <p class="footer-tel">
-
                         Hotline: <a href="tel:19006750" title="19006750">1900 6750</a>
-
                     </p>
-
                     <p class="evo-in">Địa chỉ: 70 Lu Gia, Ward 15, District 11, Ho Chi Minh City</p>
-
                     <div class="social">
                         <a class="fb" rel="noreferrer" href="https://www.facebook.com/sapo.vn/" target="_blank" aria-label="Facebook" title="Theo dõi Ant Paws trên Facebook">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="25px" viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;" xml:space="preserve">
@@ -594,19 +588,16 @@
 
                     </div>
                 </div>
-
-                <div class="col-md-6 col-sm-9 col-lg col-12 footer-nav-menu widget">
+                <!-- <div class="col-md-6 col-sm-9 col-lg col-12 footer-nav-menu widget">
                     <div class="w-100">
-                        <div class="col-lg-4">
-
-                        </div>
                         <div class="col-lg-8 my-4">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0968414914196!2d105.78049781541503!3d21.028810793151347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4cd0c66f05%3A0xea31563511af2e54!2zOCBUw7RuIFRo4bqldCBUaHV54bq_dCwgTeG7uSDEkMOsbmgsIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1658860840290!5m2!1svi!2s"
                                 width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </div>
 
                     </div>
-                </div>
+                </div> -->
+
             </div>
         </div>
         </div>

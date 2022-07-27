@@ -10659,22 +10659,14 @@ fieldset:disabled .btn {
     z-index: 1;
 }
 
-.mess {
-    /* position: relative; */
+.mess:hover {
+    transform: scale(1.1);
 }
 
 .chatbox .mess {
     border: none;
     border-radius: 50%;
-    box-shadow: 0 0 5px gray;
-}
-
-.chatbox .mess i {
-    border-radius: 50%;
-    /* background: #0078D4; */
-    color: #0078D4;
-    box-shadow: 0 0 7px rgb(158, 8, 96);
-    font-size: 50px;
+    background: none;
 }
 
 .hopchat {
@@ -10722,15 +10714,13 @@ fieldset:disabled .btn {
 
 .chat-top .cbtn {
     margin-right: 15px;
-    border-radius: 13px;
     border: none;
     background: none;
     font-size: 23px;
 }
 
 .chat-top .cbtn:hover {
-    color: #0078D4;
-    box-shadow: 0 0 5px #0078D4;
+    transform: scale(1.1);
 }
 
 .msg {
@@ -10769,23 +10759,11 @@ div.cinput {
     justify-content: space-around
 }
 
-.cinput input {
-    margin: 8px 0;
-    padding: 8px 2px;
-    border-radius: 10px;
+#cmess {
     outline-style: none;
-    font-size: 18px;
-    width: 70%;
+    /* font-size: 18px; */
     border: none;
-}
-
-.cinput i {
-    color: red;
-    width: 50px;
-}
-
-.chatbox .mess:hover {
-    box-shadow: 0 0 8px rgb(26, 115, 199);
+    background: none;
 }
 
 .btnCbox {
@@ -10797,4 +10775,5 @@ div.cinput {
 
 .btnCbox:hover {
     color: #0078D4;
+    transform: scale(1.1);
 }

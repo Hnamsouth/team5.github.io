@@ -6786,6 +6786,15 @@ function btnbars() {
     }
 }
 
+function inputmess(key) {
+    // var cmess = document.getElementById('cmess').value;
+    // console.log(cmess)
+    if (key.keyCode === 13) {
+        sendmess();
+    }
+}
+
+
 function sendmess() {
     var cmess = document.getElementById('cmess').value;
     // alert(cmess);
@@ -6820,12 +6829,4 @@ function btnleft() {
             img[i] += 110;
         }
     }
-}
-
-function left() {
-
-}
-
-function right() {
-
 }
