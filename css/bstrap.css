@@ -267,6 +267,10 @@ a {
     z-index: 1;
 }
 
+.mess svg {
+    color: #008374;
+}
+
 .mess:hover {
     transform: scale(1.1);
 }
